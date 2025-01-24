@@ -1,0 +1,2 @@
+This is a personal project in which I'm doing some Laravel studies using concepts of a really dear game to me, Final Fantasy XIV. 
+For now, it consists on an application where an user can see available jobs(the game's classes) on different factions (you can read this as a hiring company) to apply for.
