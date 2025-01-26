@@ -21,7 +21,7 @@ class JobFactory extends Factory
             'title' => fake()->jobTitle(),
             'faction_id' => Faction::factory(),
             'salary' => '40,000 Gil',
-            'description' => fake()->text(80),
+            'description' => fake()->text(120),
         ];
     }
 }

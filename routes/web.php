@@ -1,17 +1,24 @@
 <?php
 
-use App\Http\Controllers\JobController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [LandingController::class,'index'])->name('home');
+Route::view('/', 'welcome');
 
-Route::get('/jobs', [JobsController::class,'index']);
+// Route::controller(Jobscontroller::class)->group(function (){
+//     Route::get('/jobs', 'index');
+//     Route::get('/jobs/create', 'create');
+//     Route::get('/jobs/{job}', 'show');
+//     Route::post('/jobs',  'store');
+//     Route::get('/jobs/{job}/edit', 'edit');
+//     Route::patch('/jobs/{job}',  'update');
+//     Route::delete('/jobs/{job}','destroy');
+// });
 
-Route::get('/jobs/{id}', [JobController::class,'index']);
+Route::resource('jobs', JobsController::class);
 
-Route::get('/contact', [ContactController::class,'index']); 
+Route::view('/contact', 'contact');
 
  
