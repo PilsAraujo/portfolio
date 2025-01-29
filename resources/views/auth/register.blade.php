@@ -13,7 +13,7 @@
                 <x-form-field>
                   <x-form-label for="name">Name</x-form-label>
                   <div class="mt-2">
-                    <x-form-input name="name" id="name" required/>
+                    <x-form-input name="name" id="name" :value="old(key: 'name')" required/>
                   </div>
                   <x-form-error name="name"/>
                 </x-form-field>
@@ -23,7 +23,7 @@
                 <x-form-field>
                   <x-form-label for="last_name">Last Name</x-form-label>
                   <div class="mt-2">
-                    <x-form-input name="last_name" id="last_name" required/>
+                    <x-form-input name="last_name" id="last_name" :value="old('last_name')" required/>
                   </div>
                   <x-form-error name="last_name"/>
                 </x-form-field>      
@@ -31,7 +31,7 @@
                 <x-form-field>
                     <x-form-label for="email">Email</x-form-label>
                     <div class="mt-2">
-                      <x-form-input name="email" id="email" type="email" required/>
+                      <x-form-input name="email" id="email" type="email" :value="old('email')" required/>
                     </div>
                     <x-form-error name="email"/>
                   </x-form-field>
@@ -47,7 +47,7 @@
                 <x-form-field>
                     <x-form-label for="password_confirmation">Confirm Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input name="password_confirmation" id="password_confirmation" type="password_confirmation" required/>
+                            <x-form-input name="password_confirmation" id="password_confirmation" type="password" required/>
                         </div>
                     <x-form-error name="password_confirmation"/>
                 </x-form-field>    
