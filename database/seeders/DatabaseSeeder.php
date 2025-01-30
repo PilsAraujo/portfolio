@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Tataru',
             'last_name' => 'Taru',
-            'email' => 'tatarutaru@scions.com'
+            'email' => 'tatarutaru@scions.com',
+            'password' => 'tataru'
         ]);
 
         Job::factory(20)->create();
