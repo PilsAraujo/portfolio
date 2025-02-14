@@ -41,4 +41,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function faction() 
+    {
+        return $this->hasOne(Faction::class);
+    }
 }

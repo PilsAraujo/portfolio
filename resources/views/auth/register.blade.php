@@ -50,7 +50,15 @@
                             <x-form-input name="password_confirmation" id="password_confirmation" type="password" required/>
                         </div>
                     <x-form-error name="password_confirmation"/>
-                </x-form-field>    
+                </x-form-field>
+                
+                <x-form-field>
+                  <x-form-label for="faction">Faction</x-form-label>
+                  <div class="mt-2">
+                    <x-form-input name="faction" id="faction" :value="old(key: 'faction')" required/>
+                  </div>
+                  <x-form-error name="faction"/>
+                </x-form-field>
 
               </div>
 

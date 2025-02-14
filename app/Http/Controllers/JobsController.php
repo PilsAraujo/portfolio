@@ -40,12 +40,18 @@ class JobsController extends Controller
             'salary' => ['required', 'string'],
             'description' => ['required','string'],
         ]);
+
+        $faction = Auth::user()->faction;
+
+        if (!$faction) {
+            return back()->with('error', 'You must belong to a faction to post a job.');
+        }
+
     
-        $job = Job::create([
+        $job = $faction->jobs()->create([
             'title' => request('title'),
             'salary' => request('salary'),
             'description' => request('description'),
-            'faction_id' => 1
         ]);
 
         $job = Mail::to($job->faction->user)->queue(
